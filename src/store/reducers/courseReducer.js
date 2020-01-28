@@ -4,10 +4,8 @@ import {
   EDIT_COURSE,
   SET_COURSE_PAGE
 } from '../types';
-import initialState from '../initialState';
 
-const { courses, coursesPage } = initialState;
-export default (state = { list: courses, page: coursesPage }, action) => {
+export default (state = null, action) => {
   switch (action.type) {
     case ADD_COURSE: {
       return {

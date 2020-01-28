@@ -1,18 +1,13 @@
 import { ADD_USER, REMOVE_USER, EDIT_USER, SET_USER_PAGE } from '../types';
 import initialState from '../initialState';
 
-const { users, usersPage, nextUserId } = initialState;
-
-export default (
-  state = { list: users, page: usersPage, nextUserId },
-  action
-) => {
+export default (state = null, action) => {
   switch (action.type) {
     case ADD_USER: {
       return {
         ...state,
         list: [...state.list, action.user],
-        nextUserId: nextUserId + 1
+        nextUserId: state.nextUserId + 1
       };
     }
     case REMOVE_USER: {

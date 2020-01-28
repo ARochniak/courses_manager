@@ -4,10 +4,15 @@ import { BrowserRouter, Switch, Redirect } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import createStore from './store/createStore';
 import App from './routing';
+import { saveState } from './api/localStorageApi';
 
 import './index.css';
 
 const store = createStore();
+
+store.subscribe(() => {
+  saveState(store.getState());
+});
 
 ReactDOM.render(
   <Provider store={store}>
