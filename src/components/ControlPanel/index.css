@@ -1,0 +1,122 @@
+.control-panel {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.control-panel__add-find {
+  display: flex;
+  align-items: center;
+}
+
+.control-panel__add-find button {
+  cursor: pointer;
+}
+
+.add {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+
+  color: #fffbfa;
+  font-weight: lighter;
+  font-size: 1.7em;
+  line-height: 30px;
+  text-shadow: 1px 0 2px black;
+
+  background-color: #f74d3a;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 1px #d7615a;
+}
+
+.find {
+  position: relative;
+}
+
+.find__button {
+  position: absolute;
+
+  width: 30px;
+  height: 30px;
+
+  background-color: #63be7b;
+  background-image: url("images/glass.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70% 70%;
+
+  border: none;
+  border-radius: 15px;
+}
+
+.control-panel__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin: 0;
+
+  color: #363542;
+  font-size: 1.3em;
+  font-family: sans-serif;
+
+  transform: translate(-50%, -50%);
+}
+
+.find__search {
+  height: 30px;
+  padding: 0;
+  padding-left: 40px;
+
+  color: #7a7878;
+
+  border: none;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px #e8e8e8;
+}
+
+.control-panel__select {
+  position: relative;
+}
+
+.pages-select {
+  position: relative;
+
+  box-sizing: border-box;
+  height: 30px;
+  padding-right: 30px;
+  padding-left: 15px;
+
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 1px 2px #e8e8e8;
+  cursor: pointer;
+
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.pages-select option {
+  cursor: pointer;
+}
+
+.control-panel__select::after {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+
+  border-right: 2px solid #808080;
+  border-bottom: 2px solid #808080;
+  transform: translateY(-50%) rotateZ(45deg);
+
+  content: "";
+}

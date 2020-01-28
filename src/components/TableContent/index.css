@@ -1,0 +1,72 @@
+.content-table {
+  width: 100%;
+
+  table-layout: fixed;
+  border-collapse: collapse;
+  box-shadow: 0 1px 2px #e8e8e8;
+}
+
+.content-table__head {
+  color: #f1f2f6;
+  font-size: 0.9em;
+
+  background-color: #575761;
+}
+
+.content-table__head th {
+  text-align: left;
+}
+
+.content-table__head th:first-child {
+  width: 50%;
+}
+
+.content-table__head th:last-child,
+.content-table__body td:last-child {
+  text-align: right;
+}
+
+.content-table__body {
+  color: #5f5f61;
+
+  background-color: white;
+}
+
+.content-table__body tr {
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.content-table td,
+.content-table th {
+  padding: 10px 20px;
+}
+
+.content-table__body tr td:last-child button {
+  width: 25px;
+  height: 25px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70% 70%;
+
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 2px #a5a5a5;
+  cursor: pointer;
+}
+
+.content-table__body tr td:last-child button:first-child {
+  margin-right: 10px;
+
+  background-color: #5dbb6f;
+  background-image: url("images/feather.png");
+}
+
+.content-table__body tr td:last-child button:last-child {
+  background-color: #e3492f;
+  background-image: url("images/trash.png");
+}
+
+.popup {
+
+}

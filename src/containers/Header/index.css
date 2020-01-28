@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap");
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 10%;
+
+  background-color: #2e303f;
+}
+
+.header__title {
+  margin: 0;
+  padding: 5px;
+
+  color: #f6f6fc;
+  font-size: 1.5em;
+  font-family: "Kaushan Script", cursive;
+}
+
+.header__links a {
+  padding-left: 20px;
+
+  color: #b8bac6;
+  text-decoration: none;
+}
+
+.header__links a:hover {
+  color: white;
+}
+
+.is-active {
+  color: white !important;
+}
