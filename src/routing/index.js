@@ -7,7 +7,7 @@ import './index.css';
 
 const App = () => {
   return (
-    <>
+    <div className="app">
       <Header />
       <Switch>
         <Route path="/courses">
@@ -17,7 +17,7 @@ const App = () => {
           <Main content="users" />
         </Route>
       </Switch>
-    </>
+    </div>
   );
 };
 

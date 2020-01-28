@@ -11,8 +11,10 @@ const Main = ({ content, users, courses }) => {
   const isCourses = content === 'courses';
   return (
     <main className="main">
-      <ControlPanel title={content} />
-      {isCourses ? <CoursesTable /> : <UsersTable />}
+      <div>
+        <ControlPanel title={content} />
+        {isCourses ? <CoursesTable /> : <UsersTable />}
+      </div>
       <Pagination itemsLength={isCourses ? courses : users} content={content} />
     </main>
   );
