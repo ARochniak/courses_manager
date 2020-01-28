@@ -7,6 +7,7 @@ import './index.css';
 
 const ControlPanel = ({ title, dispatch, courses, users, resultsPerPage }) => {
   const searchInput = React.createRef();
+  // eslint-disable-next-line consistent-return
   const searchSubmit = e => {
     e.preventDefault();
     const items = title === 'courses' ? courses : users;
@@ -17,7 +18,6 @@ const ControlPanel = ({ title, dispatch, courses, users, resultsPerPage }) => {
     if (!(searchedItemIdx + 1)) return false;
     const page = Math.ceil((items.length - searchedItemIdx) / resultsPerPage);
     dispatch(setPage(title, page));
-
   };
   const [isAddPopup, showAddPopup] = useState(false);
   const addHandler = () => {
