@@ -30,22 +30,24 @@ const CoursesTable = ({ users, page, resultsPerPage }) => {
       <td>{user.name}</td>
       <td>{user.email}</td>
       <td>
-        <button
-          type="button"
-          onClick={() => {
-            editHandler(user.name, user.id);
-          }}
-        >
-          {' '}
-        </button>
-        <button
-          type="button"
-          onClick={() => {
-            removeHandler(user.name, user.id);
-          }}
-        >
-          {' '}
-        </button>
+        <div>
+          <button
+            type="button"
+            onClick={() => {
+              editHandler(user.name, user.id);
+            }}
+          >
+            {' '}
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              removeHandler(user.name, user.id);
+            }}
+          >
+            {' '}
+          </button>
+        </div>
       </td>
     </tr>
   ));

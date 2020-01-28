@@ -68,11 +68,29 @@
 }
 
 @media (max-width: 778px) and (orientation: portrait) {
-  .content-table__head th:first-child {
-    width: 40%;
-  }
-
   .content-table td {
     padding: 5px 10px;
+  }
+
+  .content-table__head th:first-child {
+    width: auto;
+  }
+
+  .content-table__body tr td:last-child div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .content-table__body tr td:last-child button {
+    width: 20px;
+    height: 20px;
+
+    border-radius: 5px;
+  }
+
+  .content-table__body tr td:last-child button:first-child {
+    margin-right: 0;
+    margin-bottom: 5px;
   }
 }
