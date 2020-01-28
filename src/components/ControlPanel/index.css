@@ -120,3 +120,32 @@
 
   content: "";
 }
+
+@media (max-width: 776px) {
+  .control-panel__title {
+    position: initial;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    padding: 20px 0;
+
+    text-align: center;
+
+    transform: none;
+  }
+
+  .control-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .control-panel__select {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    text-align: right;
+  }
+}

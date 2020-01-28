@@ -5,8 +5,6 @@ import TableContent from '../TableContent';
 import RemovePopup from '../RemovePopup';
 import EditPopup from '../EditPopup';
 
-import './index.css';
-
 const CoursesTable = ({ courses, page, resultsPerPage }) => {
   const [isRemovePopup, showRemovePopup] = useState(false);
   const [isEditPopup, showEditPopup] = useState(false);
