@@ -66,3 +66,13 @@
   background-color: #e3492f;
   background-image: url("images/trash.png");
 }
+
+@media (max-width: 778px) and (orientation: portrait) {
+  .content-table__head th:first-child {
+    width: 40%;
+  }
+
+  .content-table td {
+    padding: 5px 10px;
+  }
+}

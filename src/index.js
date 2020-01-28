@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Switch, Redirect } from 'react-router-dom';
+import { HashRouter, Switch, Redirect } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import createStore from './store/createStore';
 import App from './routing';
@@ -16,12 +16,12 @@ store.subscribe(() => {
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
+    <HashRouter>
       <Switch>
         <Redirect exact from="/" to="/courses" />
         <App />
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
   </Provider>,
   document.getElementById('root')
 );
