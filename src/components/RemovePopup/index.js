@@ -12,7 +12,10 @@ const RemovePopup = ({ item, hide, dispatch }) => {
   return (
     <div className="remove-popup">
       <div className="remove-popup__dialog">
-        Are you sure you want to remove "{item.name}" from {item.content}?
+        Are you sure you want to remove
+        {` "${item.name}@ `}
+        from
+        {`${item.content}?`}
         <div className="dialog__buttons">
           <button type="button" onClick={hide}>
             NO

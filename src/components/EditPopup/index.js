@@ -15,7 +15,8 @@ const EditPopup = ({ item, hide, dispatch }) => {
   return (
     <div className="edit-popup">
       <div className="edit-popup__dialog">
-        New name for {`${item.content.slice(0, -1)}: `}
+        New name for
+        {` ${item.content.slice(0, -1)}: `}
         <input defaultValue={item.name} ref={textInput} />
         <div className="dialog__buttons">
           <button type="button" onClick={hide}>

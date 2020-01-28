@@ -1,4 +1,9 @@
-import { ADD_COURSE, REMOVE_COURSE, EDIT_COURSE, SET_COURSE_PAGE } from '../types';
+import {
+  ADD_COURSE,
+  REMOVE_COURSE,
+  EDIT_COURSE,
+  SET_COURSE_PAGE
+} from '../types';
 import initialState from '../initialState';
 
 const { courses, coursesPage } = initialState;
