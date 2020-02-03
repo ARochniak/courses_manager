@@ -22,3 +22,5 @@ To make a production build
 Filter all list or just a list that is displayed
 ### `Rebuild PopupWindows and TableContents` 
 They must inherit from one parent component
+### `Make the search more functional`
+
