@@ -6,18 +6,42 @@ import AddPopup from '../AddPopup';
 import './index.css';
 
 const ControlPanel = ({ title, dispatch, courses, users, resultsPerPage }) => {
+  const items = title === 'courses' ? courses : users;
+  const [helpContent, setHelpContent] = useState(null);
   const searchInput = React.createRef();
   // eslint-disable-next-line consistent-return
-  const searchSubmit = e => {
-    e.preventDefault();
-    const items = title === 'courses' ? courses : users;
+  const showSearchedItem = value => {
     const searchedItemIdx = items.findIndex(
-      item =>
-        item.name.toLowerCase() === searchInput.current.value.toLowerCase()
+      item => item.name.toLowerCase() === value.toLowerCase()
     );
     if (!(searchedItemIdx + 1)) return false;
     const page = Math.ceil((items.length - searchedItemIdx) / resultsPerPage);
     dispatch(setPage(title, page));
+  };
+  const searchSubmit = e => {
+    e.preventDefault();
+    showSearchedItem(searchInput.current.value);
+  };
+  const helpOnClick = e => {
+    showSearchedItem(e.currentTarget.textContent);
+    setHelpContent(null);
+  };
+  const inputOnInput = e => {
+    if (e.currentTarget.value === '') {
+      setHelpContent(null);
+      return;
+    }
+    setHelpContent(
+      items
+        .filter(item => item.name.includes(e.currentTarget.value))
+        .map(itemFiltered => (
+          <li key={itemFiltered.id || itemFiltered.code}>
+            <button onClick={helpOnClick} type="button">
+              {itemFiltered.name}
+            </button>
+          </li>
+        ))
+    );
   };
   const [isAddPopup, showAddPopup] = useState(false);
   const addHandler = () => {
@@ -39,10 +63,14 @@ const ControlPanel = ({ title, dispatch, courses, users, resultsPerPage }) => {
           <form className="find" onSubmit={searchSubmit}>
             <input className="find__button" type="submit" value="" />
             <input
-              className="find__search"
+              onInput={inputOnInput}
+              className={`find__search${
+                helpContent ? ' find__search_help' : ''
+              }`}
               ref={searchInput}
               placeholder="search by name"
             />
+            <ul className="find__help">{helpContent}</ul>
           </form>
         </div>
         <h2 className="control-panel__title">{title.toUpperCase()}</h2>
