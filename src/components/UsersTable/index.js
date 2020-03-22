@@ -20,16 +20,16 @@ const CoursesTable = ({ users, page, resultsPerPage }) => {
   const pageItems = getPageItems(users, page, resultsPerPage);
   const tHead = (
     <>
-      <th>NAME</th>
-      <th>E-MAIL</th>
-      <th>ACTION</th>
+      <div>NAME</div>
+      <div>E-MAIL</div>
+      <div>ACTION</div>
     </>
   );
   const tBody = pageItems.map(user => (
-    <tr key={user.id}>
-      <td>{user.name}</td>
-      <td>{user.email}</td>
-      <td>
+    <div key={user.id}>
+      <div>{user.name}</div>
+      <div>{user.email}</div>
+      <div>
         <div>
           <button
             type="button"
@@ -48,8 +48,8 @@ const CoursesTable = ({ users, page, resultsPerPage }) => {
             {' '}
           </button>
         </div>
-      </td>
-    </tr>
+      </div>
+    </div>
   ));
   return (
     <>

@@ -6,12 +6,10 @@ import './index.css';
 
 const TableContent = ({ tHead, tBody }) => {
   return (
-    <table className="content-table">
-      <thead className="content-table__head">
-        <tr>{tHead}</tr>
-      </thead>
-      <tbody className="content-table__body">{tBody}</tbody>
-    </table>
+    <div className="content-table">
+      <div className="content-table__head">{tHead}</div>
+      <div className="content-table__body">{tBody}</div>
+    </div>
   );
 };
 

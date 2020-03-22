@@ -20,16 +20,16 @@ const CoursesTable = ({ courses, page, resultsPerPage }) => {
   const pageItems = getPageItems(courses, page, resultsPerPage);
   const tHead = (
     <>
-      <th>NAME</th>
-      <th>CODE</th>
-      <th>ACTION</th>
+      <div>NAME</div>
+      <div>CODE</div>
+      <div>ACTION</div>
     </>
   );
   const tBody = pageItems.map(course => (
-    <tr key={course.code}>
-      <td>{course.name}</td>
-      <td>{course.code}</td>
-      <td>
+    <div key={course.code}>
+      <div>{course.name}</div>
+      <div>{course.code}</div>
+      <div>
         <div>
           <button
             type="button"
@@ -48,8 +48,8 @@ const CoursesTable = ({ courses, page, resultsPerPage }) => {
             {' '}
           </button>
         </div>
-      </td>
-    </tr>
+      </div>
+    </div>
   ));
   return (
     <>
