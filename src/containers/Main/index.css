@@ -7,7 +7,7 @@
   background-color: #f1f1f1;
 }
 
-@media (max-width: 778px) and (orientation: portrait) {
+@media (max-width: 480px) {
   .main {
     padding: 0 2%;
   }
