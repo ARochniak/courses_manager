@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { removeItem } from '../../store/thunk';
 
+import PopupContainer from '../PopupContainer';
 import PopupButton from '../PopupButton';
 
 import './index.scss';
@@ -12,18 +13,18 @@ const RemovePopup = ({ item, hide, dispatch }) => {
     hide();
   };
   return (
-    <div className="remove-popup">
-      <div className="remove-popup__dialog">
+    <PopupContainer>
+      <div className="remove-popup">
         Are you sure you want to remove
         {` "${item.name}@ `}
         from
         {`${item.content}?`}
-        <div className="dialog__buttons">
+        <div className="remove-popup__buttons">
           <PopupButton value="NO" clickHandler={hide} />
           <PopupButton value="YES" clickHandler={removeHandler} />
         </div>
       </div>
-    </div>
+    </PopupContainer>
   );
 };
 

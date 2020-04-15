@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { addItem } from '../../store/thunk';
 
+import PopupContainer from '../PopupContainer';
 import PopupButton from '../PopupButton';
 
 import './index.scss';
@@ -43,17 +44,17 @@ const AddPopup = ({ content, hide, dispatch, codes }) => {
       />
     );
   return (
-    <div className="add-popup">
-      <form className="add-popup__dialog" onSubmit={addHandler}>
+    <PopupContainer>
+      <form className="add-popup" onSubmit={addHandler}>
         <input placeholder="NAME" ref={nameInput} required />
         <br />
         {secondField}
-        <div className="dialog__buttons">
+        <div className="add-popup__buttons">
           <PopupButton value="CANCEL" clickHandler={hide} />
           <PopupButton value={`ADD ${content.slice(0, -1)}`} type="submit" />
         </div>
       </form>
-    </div>
+    </PopupContainer>
   );
 };
 
