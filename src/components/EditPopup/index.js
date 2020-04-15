@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { editItem } from '../../store/thunk';
-import './index.css';
+
+import PopupButton from '../PopupButton';
+
+import './index.scss';
 
 const EditPopup = ({ item, hide, dispatch }) => {
   const textInput = React.createRef();
@@ -19,12 +22,8 @@ const EditPopup = ({ item, hide, dispatch }) => {
         {` ${item.content.slice(0, -1)}: `}
         <input defaultValue={item.name} ref={textInput} />
         <div className="dialog__buttons">
-          <button type="button" onClick={hide}>
-            CANCEL
-          </button>
-          <button type="button" onClick={editHandler}>
-            YES
-          </button>
+          <PopupButton value="CANCEL" clickHandler={hide} />
+          <PopupButton value="YES" clickHandler={editHandler} />
         </div>
       </div>
     </div>

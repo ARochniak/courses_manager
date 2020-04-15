@@ -2,7 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { removeItem } from '../../store/thunk';
 
-import './index.css';
+import PopupButton from '../PopupButton';
+
+import './index.scss';
 
 const RemovePopup = ({ item, hide, dispatch }) => {
   const removeHandler = () => {
@@ -17,12 +19,8 @@ const RemovePopup = ({ item, hide, dispatch }) => {
         from
         {`${item.content}?`}
         <div className="dialog__buttons">
-          <button type="button" onClick={hide}>
-            NO
-          </button>
-          <button type="button" onClick={removeHandler}>
-            YES
-          </button>
+          <PopupButton value="NO" clickHandler={hide} />
+          <PopupButton value="YES" clickHandler={removeHandler} />
         </div>
       </div>
     </div>

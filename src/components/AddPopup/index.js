@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { addItem } from '../../store/thunk';
-import './index.css';
+
+import PopupButton from '../PopupButton';
+
+import './index.scss';
 
 const AddPopup = ({ content, hide, dispatch, codes }) => {
   const nameInput = React.createRef();
@@ -46,8 +49,8 @@ const AddPopup = ({ content, hide, dispatch, codes }) => {
         <br />
         {secondField}
         <div className="dialog__buttons">
-          <input type="button" value="CANCEL" onClick={hide} />
-          <input type="submit" value={`ADD ${content.slice(0, -1)}`} />
+          <PopupButton value="CANCEL" clickHandler={hide} />
+          <PopupButton value={`ADD ${content.slice(0, -1)}`} type="submit" />
         </div>
       </form>
     </div>
