@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
 
 .header {
   display: flex;
@@ -16,14 +16,14 @@
 
   color: #f6f6fc;
   font-size: 1.5em;
-  font-family: "Kaushan Script", cursive;
-}
+  font-family: 'Kaushan Script', cursive;
 
-.header__links a {
-  padding-left: 20px;
+  a {
+    padding-left: 20px;
 
-  color: #b8bac6;
-  text-decoration: none;
+    color: #b8bac6;
+    text-decoration: none;
+  }
 }
 
 .header__links a:hover {

@@ -1,0 +1,41 @@
+.add-popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.add-popup__dialog {
+  padding: 30px;
+
+  font-size: 1.3em;
+
+  background-color: white;
+  box-shadow: 0 1px 5px #434343;
+
+  input {
+    padding: 5px 10px;
+
+    font-size: 0.8em;
+
+    border: 1px solid #1acb1a;
+    border-radius: 3px;
+  }
+
+  input:first-child {
+    margin-bottom: 20px;
+  }
+
+  input:focus {
+    box-shadow: 0 0 3px green;
+  }
+}

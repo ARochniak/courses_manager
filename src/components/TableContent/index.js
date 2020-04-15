@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './index.css';
+import './index.scss';
 
 // TODO combine curses and users tables business logic in TableContent component
 

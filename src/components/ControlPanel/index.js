@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { setResultsPerPage, setPage } from '../../store/thunk';
 import AddPopup from '../AddPopup';
 
-import './index.css';
+import './index.scss';
 
 const ControlPanel = ({ title, dispatch, courses, users, resultsPerPage }) => {
   const items = title === 'courses' ? courses : users;
@@ -26,7 +26,7 @@ const ControlPanel = ({ title, dispatch, courses, users, resultsPerPage }) => {
     showSearchedItem(e.currentTarget.textContent);
     setHelpContent(null);
   };
-  const inputOnInput = e => {
+  const handleOnInput = e => {
     if (e.currentTarget.value === '') {
       setHelpContent(null);
       return;
@@ -57,20 +57,20 @@ const ControlPanel = ({ title, dispatch, courses, users, resultsPerPage }) => {
       ) : null}
       <div className="control-panel">
         <div className="control-panel__add-find">
-          <button className="add" type="button" onClick={addHandler}>
+          <button className="add-button" type="button" onClick={addHandler}>
             +
           </button>
-          <form className="find" onSubmit={searchSubmit}>
-            <input className="find__button" type="submit" value="" />
+          <form className="find-panel" onSubmit={searchSubmit}>
+            <input className="find-panel__button" type="submit" value="" />
             <input
-              onInput={inputOnInput}
-              className={`find__search${
-                helpContent ? ' find__search_help' : ''
+              onInput={handleOnInput}
+              className={`find-panel__search${
+                helpContent ? ' find-panel__search_help' : ''
               }`}
               ref={searchInput}
               placeholder="search by name"
             />
-            <ul className="find__help">{helpContent}</ul>
+            <ul className="find-panel__help">{helpContent}</ul>
           </form>
         </div>
         <h2 className="control-panel__title">{title.toUpperCase()}</h2>

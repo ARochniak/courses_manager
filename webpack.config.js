@@ -25,7 +25,7 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
+        test: /\.(s*)css$/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -34,7 +34,8 @@ module.exports = {
               hmr: process.env.NODE_ENV === 'development'
             }
           },
-          'css-loader'
+          'css-loader',
+          'sass-loader'
         ]
       },
       {

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { setPage } from '../../store/thunk';
 
-import './index.css';
+import './index.scss';
 
 const Pagination = props => {
   const {
