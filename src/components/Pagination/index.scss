@@ -1,3 +1,5 @@
+$arrow_border: 1px solid white;
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -51,8 +53,8 @@
     width: 5px;
     height: 5px;
 
-    border-bottom: 1px solid white;
-    border-left: 1px solid white;
+    border-bottom: $arrow_border;
+    border-left: $arrow_border;
     transform: translate(-25%, -50%) rotateZ(45deg);
 
     content: "";
@@ -60,8 +62,8 @@
 
   li:last-child button::before {
     border: none;
-    border-top: 1px solid white;
-    border-right: 1px solid white;
+    border-top: $arrow_border;
+    border-right: $arrow_border;
     transform: translate(-75%, -50%) rotateZ(45deg);
   }
 }
